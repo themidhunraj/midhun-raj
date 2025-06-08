@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Midhun Raj | Software Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
+    <img src="pfp.png" alt="Profile Picture" class="profile-pic" />
     <h1>Midhun Raj</h1>
     <p>Software Developer</p>
   </header>
@@ -16,23 +17,38 @@
   <section class="about">
     <h2>About Me</h2>
     <p>
-      I'm a software developer with a background in health science and a strong interest in building practical, scalable solutions.
-      After earning my B.S. in Health Science in 2018, I transitioned into tech through Oregon State University's post-baccalaureate CS program.
-      Since 2022, I’ve been working in ERP implementation, developing backend services and workflows using tools like Python, Node.js, and Odoo.
-      I enjoy solving real-world problems through clean, maintainable code.
-    </p>
+      I'm a software developer with a strong interest in building practical, scalable solutions. 
+      Since 2022, I've been working in ERP implementation, developing backend services and workflows using tools like Python, PostgreSQL, and Odoo. 
+      I enjoy solving real-world problems through clean, maintainable code and continuously improving my technical skills.
+      <br>
+      When I'm not coding, I am either messing around with Blender, enjoying a workout or playing with my dog, Max !
   </section>
-
+  
   <section class="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>Express.js</li>
-      <li>Node.js</li>
-      <li>Odoo</li>
-      <li>PostgreSQL</li>
-    </ul>
+    <div class="skill-badges">
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>Express.js</span>
+      <span>Node.js</span>
+      <span>Odoo</span>
+      <span>PostgreSQL</span>
+      <span>Blender</span>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3><a href="https://github.com/themidhunraj/janggi" target="_blank">Janggi (Korean Chess)</a></h3>
+        <p>A Python-based two-player text interface for playing Janggi (Korean chess). Implements all rules and prevents illegal moves without a GUI.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/themidhunraj/rubiks_cube_solver" target="_blank">Rubik's Cube Solver Machine</a></h3>
+        <p>A physical Rubik's Cube solving machine powered by 3D-printed components and servo motors. Uses the Kociemba algorithm to solve the cube in 20 moves or fewer.</p>
+      </div>
+    </div>
   </section>
 
   <section class="contact">
@@ -42,6 +58,7 @@
 
   <footer>
     <p>&copy; 2025 Midhun Raj</p>
+    <p style="font-size: 0.9rem; color: #ccc;">“Flow is the secret to happiness — find it in code, art, and life.”</p>
   </footer>
 </body>
 </html>
