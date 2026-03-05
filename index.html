@@ -51,6 +51,7 @@
       <span>Linux CLI</span>
       <span>Docker</span>
       <span>PostgreSQL</span>
+      <span>MongoDB</span>
       <span>React</span>
       <span>Node.js</span>
       <span>Go</span>
@@ -113,7 +114,7 @@
       <a href="mailto:themidhunraj@gmail.com">themidhunraj@gmail.com</a>
       · <a href="https://www.linkedin.com/in/midhun-raj-4016b7227" target="_blank" rel="noopener">LinkedIn</a>
       · <a href="https://github.com/themidhunraj" target="_blank" rel="noopener">GitHub</a>
-      · <a href="resume.html" id="resume-link">Resume</a>
+      · <a href="resume.html">Resume</a>
     </p>
   </section>
 
@@ -123,53 +124,8 @@
     <p class="quote">"Make it work, make it right, make it fast." — Kent Beck</p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    document.getElementById('resume-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      const link = this;
-      link.textContent = 'Generating PDF…';
-      link.style.pointerEvents = 'none';
-
-      fetch('resume.html')
-        .then(r => r.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const resumeElement = doc.querySelector('.resume-page');
-          const styleElement = doc.querySelector('style');
-          if (!resumeElement) {
-            window.location.href = 'resume.html';
-            return;
-          }
-          const wrapper = document.createElement('div');
-          wrapper.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;background:#fff;';
-          if (styleElement) wrapper.appendChild(styleElement.cloneNode(true));
-          wrapper.appendChild(resumeElement.cloneNode(true));
-          document.body.appendChild(wrapper);
-
-          return document.fonts.ready.then(() => {
-            return html2pdf().set({
-              margin: 10,
-              filename: 'Midhun-Raj-Resume.pdf',
-              image: { type: 'jpeg', quality: 0.98 },
-              html2canvas: { scale: 2 },
-              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            }).from(wrapper).save().then(() => {
-              document.body.removeChild(wrapper);
-              link.textContent = 'Resume';
-              link.style.pointerEvents = '';
-            });
-          });
-        })
-        .catch(() => {
-          window.location.href = 'resume.html';
-          link.textContent = 'Resume';
-          link.style.pointerEvents = '';
-        });
-    });
   </script>
 </body>
 </html>
