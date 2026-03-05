@@ -12,25 +12,33 @@
   <meta property="og:image" content="pfp.png">
   <meta name="theme-color" content="#0E5DF6">
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="main-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <header>
-    <img src="pfp.png" alt="Profile Picture" class="profile-pic" />
+    <img src="pfp.png" alt="Profile Picture" class="profile-pic" loading="lazy" />
     <h1>Midhun Raj</h1>
     <p>Software Developer</p>
   </header>
 
-  <section class="about">
+  <section id="about" class="about">
     <h2>About Me</h2>
     <p>
-      I build practical backend systems and automation that solve real business problems, mainly using Python,
-      SQL, and Odoo. I enjoy turning complex workflows into clean, reliable tools and shipping features that
-      teams can actually use every day. Outside work, I explore 3D design, hardware projects, and sketching.
+      I'm a software developer who likes turning messy workflows into tools people actually enjoy using. I customize Odoo ERP systems—Sales, Accounting, Manufacturing—and build EDI integrations that keep things running smoothly. Python and SQL are my go-tos, but I’ve also shipped full-stack features with React and Go.
+    </p>
+    <p>
+      When I’m not coding, I’m usually tinkering: 3D printing, building hardware projects like the Opsis, or sketching. I’m always curious about how things work under the hood.
     </p>
   </section>
   
-  <section class="skills">
+  <section id="skills" class="skills">
     <h2>Skills</h2>
     <div class="skill-badges">
       <span>Python</span>
@@ -42,20 +50,25 @@
       <span>Linux CLI</span>
       <span>Docker</span>
       <span>PostgreSQL</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Go</span>
+      <span>Cursor</span>
+      <span>Claude Code</span>
     </div>
   </section>
 
-  <section class="projects">
+  <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-cards">
-      <a class="card" href="https://opsis-demo.com/web" target="_blank" rel="noopener">
-        <div class="icon-ring opsis"><img src="opsis_eye.png" alt="Opsis logo" class="card-icon" /></div>
+      <a class="card" href="https://opsis-demo.com/web" target="_blank" rel="noopener" aria-label="View Opsis AI Assistant project">
+        <div class="icon-ring opsis"><img src="opsis_eye.png" alt="Opsis logo" class="card-icon" loading="lazy" /></div>
         <h3>Opsis AI Assistant</h3>
         <div class="tags"><span class="tag">Python</span><span class="tag">Go</span><span class="tag">Odoo</span><span class="tag">React</span><span class="tag">Redis</span><span class="tag">OpenAI</span><span class="tag">LLM</span><span class="tag">VLM</span></div>
-        <p>An Odoo AI copilot with a distributed backend for real workflows: natural-language data lookup, context-aware assistance, and workflow automation.<audio src=""></audio>.</p>
+        <p>An Odoo AI copilot with a distributed backend for real workflows: natural-language data lookup, context-aware assistance, and workflow automation.</p>
       </a>
 
-      <a class="card" href="https://drive.google.com/file/d/1YmN2F2j3p-Ona-4RtJs8YWP49kPlDY98/view?usp=drive_link" target="_blank" rel="noopener">
+      <a class="card" href="https://drive.google.com/file/d/1YmN2F2j3p-Ona-4RtJs8YWP49kPlDY98/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View Rival AI Turret project">
         <div class="icon-ring blue">
           <svg viewBox="0 0 24 24" class="card-icon" aria-hidden="true">
             <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -67,7 +80,7 @@
         <p>A flywheel turret project: assembly montage and build workflow. Future vision includes camera-guided targeting and Raspberry Pi control.</p>
       </a>
 
-      <a class="card" href="https://github.com/themidhunraj/janggi" target="_blank" rel="noopener">
+      <a class="card" href="https://github.com/themidhunraj/janggi" target="_blank" rel="noopener" aria-label="View Janggi project on GitHub">
         <div class="icon-ring indigo">
           <svg viewBox="0 0 24 24" class="card-icon" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -79,7 +92,7 @@
         <p>A Python-based two-player text interface for playing Janggi. Implements all rules and prevents illegal moves.</p>
       </a>
 
-      <a class="card" href="https://github.com/themidhunraj/rubiks_cube_solver" target="_blank" rel="noopener">
+      <a class="card" href="https://github.com/themidhunraj/rubiks_cube_solver" target="_blank" rel="noopener" aria-label="View Rubik's Cube Solver on GitHub">
         <div class="icon-ring orange">
           <svg viewBox="0 0 24 24" class="card-icon" aria-hidden="true">
             <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -93,18 +106,69 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p><a href="https://www.linkedin.com/in/midhun-raj-4016b7227" target="_blank" rel="noopener">LinkedIn</a></p>
+    <p>
+      <a href="mailto:themidhunraj@gmail.com">themidhunraj@gmail.com</a>
+      · <a href="https://www.linkedin.com/in/midhun-raj-4016b7227" target="_blank" rel="noopener">LinkedIn</a>
+      · <a href="https://github.com/themidhunraj" target="_blank" rel="noopener">GitHub</a>
+      · <a href="resume.html" id="resume-link">Resume</a>
+    </p>
   </section>
 
   <footer>
+    <p><a href="#" class="back-to-top">Back to top</a></p>
     <p>&copy; <span id="year"></span> Midhun Raj</p>
-    <p class="quote">“Stay hungry. Stay foolish.” -Steve Jobs</p>
+    <p class="quote">"Make it work, make it right, make it fast." — Kent Beck</p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('resume-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const link = this;
+      link.textContent = 'Generating PDF…';
+      link.style.pointerEvents = 'none';
+
+      fetch('resume.html')
+        .then(r => r.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const resumeElement = doc.querySelector('.resume-page');
+          const styleElement = doc.querySelector('style');
+          if (!resumeElement) {
+            window.location.href = 'resume.html';
+            return;
+          }
+          const wrapper = document.createElement('div');
+          wrapper.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;background:#fff;';
+          if (styleElement) wrapper.appendChild(styleElement.cloneNode(true));
+          wrapper.appendChild(resumeElement.cloneNode(true));
+          document.body.appendChild(wrapper);
+
+          return document.fonts.ready.then(() => {
+            return html2pdf().set({
+              margin: 10,
+              filename: 'Midhun-Raj-Resume.pdf',
+              image: { type: 'jpeg', quality: 0.98 },
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).from(wrapper).save().then(() => {
+              document.body.removeChild(wrapper);
+              link.textContent = 'Resume';
+              link.style.pointerEvents = '';
+            });
+          });
+        })
+        .catch(() => {
+          window.location.href = 'resume.html';
+          link.textContent = 'Resume';
+          link.style.pointerEvents = '';
+        });
+    });
   </script>
 </body>
 </html>

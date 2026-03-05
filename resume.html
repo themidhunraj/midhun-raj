@@ -1,0 +1,196 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midhun Raj | Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Resume-specific styles */
+    .resume-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #fff;
+      color: #1b2330;
+      font-family: 'Poppins', system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    .resume-page h1 {
+      font-size: 1.75rem;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .resume-page .subtitle {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin-bottom: 1rem;
+    }
+    .resume-page .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .resume-page .contact-row a {
+      color: #0b63d9;
+      text-decoration: none;
+    }
+    .resume-page .contact-row a:hover { text-decoration: underline; }
+    .resume-page h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #0E5DF6;
+      padding-bottom: 0.35rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+    .resume-page .entry {
+      margin-bottom: 1rem;
+    }
+    .resume-page .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .resume-page .entry-title { font-weight: 600; font-size: 1rem; }
+    .resume-page a.entry-title { color: #0b63d9; text-decoration: none; }
+    .resume-page a.entry-title:hover { text-decoration: underline; }
+    .resume-page .entry-meta {
+      font-size: 0.85rem;
+      color: #4a5568;
+    }
+    .resume-page .entry-sub { font-style: italic; font-size: 0.9rem; color: #374151; }
+    .resume-page ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1.25rem;
+    }
+    .resume-page li { margin-bottom: 0.25rem; }
+    .resume-page .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .resume-page .skills-grid dt {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #374151;
+    }
+    .resume-page .skills-grid dd {
+      margin: 0 0 0.5rem;
+      font-size: 0.9rem;
+    }
+    .resume-page .project-tags {
+      font-size: 0.8rem;
+      color: #4a5568;
+      margin-bottom: 0.25rem;
+    }
+    @media print {
+      .resume-page { padding: 1rem; }
+      .resume-page h2 { margin-top: 1rem; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume-page">
+    <h1>Midhun Raj</h1>
+    <p class="subtitle">Software Developer</p>
+    <p style="margin: 0 0 1rem; font-size: 0.9rem; color: #4a5568;">Python & Odoo developer with experience in ERP customization, EDI integrations, and full-stack development.</p>
+    <div class="contact-row">
+      <span>themidhunraj@gmail.com</span>
+      <span>352-593-1540</span>
+      <a href="https://www.linkedin.com/in/midhun-raj-4016b7227" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/themidhunraj" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of South Florida</span>
+        <span class="entry-meta">Tampa, FL · May 2014 – May 2018</span>
+      </div>
+      <p class="entry-sub">Bachelor of Science in Health Science</p>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Oregon State University</span>
+        <span class="entry-meta">Corvallis, OR · May 2020 – Dec 2022</span>
+      </div>
+      <p class="entry-sub">Bachelor of Science in Computer Science</p>
+      <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">Relevant courses: Data Structures, Operating Systems, Assembly, Algorithms, Software Engineering I & II</p>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Captivea</span>
+        <span class="entry-meta">Orlando, FL · Dec 2022 – Present</span>
+      </div>
+      <p class="entry-sub">Software Developer</p>
+      <ul>
+        <li>Customized and implemented Odoo ERP features across Sales, Accounting, and Manufacturing for multiple clients</li>
+        <li>Improved reliability and performance through Python/SQL optimization, test coverage, documentation, and leading user training and go-lives</li>
+        <li>Built and supported EDI integrations, including SPS Commerce and 3PL-related flows</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <a href="https://opsis-demo.com/web" target="_blank" rel="noopener" class="entry-title">Opsis: Odoo AI Assistant</a>
+      </div>
+      <p class="project-tags">Python, React, Node.js, Ollama, LLM/VLMs, REST</p>
+      <ul>
+        <li>AI assistant with a distributed backend supporting concurrent users; enables natural-language data retrieval, record creation, and real-time streaming responses</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <a href="https://drive.google.com/file/d/1YmN2F2j3p-Ona-4RtJs8YWP49kPlDY98/view?usp=drive_link" target="_blank" rel="noopener" class="entry-title">Rival AI Turret</a>
+      </div>
+      <p class="project-tags">Raspberry Pi, Python, 3D Printing, Hardware</p>
+      <ul>
+        <li>Flywheel turret prototype with modular assembly; supports camera-guided targeting and Pi-based control for autonomous tracking</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <a href="https://github.com/themidhunraj/janggi" target="_blank" rel="noopener" class="entry-title">Janggi (Korean Chess)</a>
+      </div>
+      <p class="project-tags">Python, Game Logic</p>
+      <ul>
+        <li>Two-player text interface implementing full Janggi rules with move validation</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <a href="https://github.com/themidhunraj/rubiks_cube_solver" target="_blank" rel="noopener" class="entry-title">Rubik's Cube Solver</a>
+      </div>
+      <p class="project-tags">Python, Kociemba algorithm, 3D-printed mechanism</p>
+      <ul>
+        <li>Physical solving machine using the Kociemba algorithm to solve any cube orientation in 20 moves or fewer</li>
+      </ul>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <dl class="skills-grid">
+      <dt>Languages</dt>
+      <dd>Python, JavaScript, TypeScript, SQL, HTML, CSS</dd>
+      <dt>Frameworks & Libraries</dt>
+      <dd>React, Node.js, Next.js, Flask/Express, Odoo (ORM/OWL)</dd>
+      <dt>Developer Tools</dt>
+      <dd>Git, Linux CLI, Docker, Cursor, Claude Code, LLM-assisted coding</dd>
+      <dt>Databases</dt>
+      <dd>PostgreSQL, MySQL</dd>
+    </dl>
+  </main>
+</body>
+</html>
